@@ -27,9 +27,13 @@ A mobile-responsive React app that helps individuals build good habits and elimi
 
 ## Key Files
 
+## Key Files
+
 - [`src/firebaseConfig.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/firebaseConfig.js): Firebase app initialization  
 - [`src/HabitForm.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitForm.js): UI component for creating and saving new habits  
-- [`src/LoggingDashboard.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/LoggingDashboard.js): (Planned or in-progress) logging and visualization interface  
+- [`src/HabitLogger.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitLogger.js): Component for logging daily habit status  
+- [`src/CalendarView.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/CalendarView.js): Displays user logs with formatted dates  
+- [`src/StatsDashboard.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/StatsDashboard.js): Dashboard showing completion rates and trends  
 - [`demo/hello-world.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/demo/hello-world.js): Demo component to verify project setup
 
 ---
