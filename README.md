@@ -1,6 +1,6 @@
 # Habit AI Tracker
 
-A mobile-responsive React app that helps individuals build good habits and eliminate bad ones. The app integrates Firebase for real-time cloud storage and is gradually incorporating AI-powered features like personalized summaries, habit loop analysis, reflection support, and habit bundling logic.
+A mobile-responsive React app that helps individuals build good habits and eliminate bad ones. The app integrates Firebase for real-time habit storage and now includes AI-powered features such as personalized summaries, behavior pattern detection, and habit bundling recommendations.
 
 ---
 
@@ -20,15 +20,15 @@ A mobile-responsive React app that helps individuals build good habits and elimi
 ### ✅ Week 5–6: Logging, Calendar View & Statistics
 - Built `HabitLogger` to track daily habit status (completed/missed)
 - Implemented `CalendarView` to display logs grouped by date
-- Developed `StatsDashboard` to show completion rates and trend summaries
+- Developed `StatsDashboard` to show completion rates and habit trends
 - Added `HabitDetails` to break down data for individual habits
 
-### ✅ Week 7–8: AI Foundations & Habit Intelligence
-- Refactored backend data schema for GPT-based summarization
-- Designed pattern detection logic for identifying behavior trends
-- Implemented internal habit bundling detection based on time and type
-- Created stub logic for GPT reflection prompts and summaries
-- Began backend integration planning for OpenAI API support
+### ✅ Week 7–8: AI Intelligence & Insight Features
+- Added `generateDailySummary()` function to simulate GPT-style feedback
+- Implemented behavior pattern detection using `detectPatterns.js`
+- Added habit bundling logic via `recommendHabitBundles.js`
+- Updated `HabitDetails.js` to show AI summaries, performance trends, and bundle insights
+- Organized project logic into modular folders (`/ai`, `/utils`)
 
 ---
 
@@ -37,10 +37,13 @@ A mobile-responsive React app that helps individuals build good habits and elimi
 - [`src/firebaseConfig.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/firebaseConfig.js): Firebase app initialization  
 - [`src/HabitForm.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitForm.js): UI component for creating and saving new habits  
 - [`src/HabitLogger.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitLogger.js): Daily logging interface for habit completion tracking  
-- [`src/CalendarView.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/CalendarView.js): View of logs grouped by date in a calendar-like format  
-- [`src/StatsDashboard.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/StatsDashboard.js): Displays analytics and performance metrics  
-- [`src/HabitDetails.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitDetails.js): Breaks down performance for individual habits  
-- [`demo/hello-world.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/demo/hello-world.js): Demo test component to verify environment setup
+- [`src/CalendarView.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/CalendarView.js): Displays logs grouped by date in a calendar-like format  
+- [`src/StatsDashboard.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/StatsDashboard.js): Completion rate and trend analytics  
+- [`src/HabitDetails.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/HabitDetails.js): Breakdown of individual habit performance with AI insights  
+- [`src/ai/generateSummary.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/ai/generateSummary.js): Simulates GPT-style habit summaries  
+- [`src/ai/detectPatterns.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/ai/detectPatterns.js): Detects success streaks and missed day trends  
+- [`src/utils/habitBundler.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/src/utils/habitBundler.js): Suggests bundled habits by time of day  
+- [`demo/hello-world.js`](https://github.com/TacoDacoE/habit-ai-tracker/blob/main/demo/hello-world.js): Demo component used to verify project setup
 
 ---
 
