@@ -6,24 +6,24 @@ A mobile-responsive React app that helps individuals build good habits and elimi
 
 ## Features Completed (Week 1–8)
 
-### ✅ Week 1–2: Project Setup & Backend Integration
+### Week 1–2: Project Setup & Backend Integration
 - Finalized project scope and technical plan
 - Initialized GitHub repository and Firebase project
 - Configured Firestore for real-time habit data storage
 - Verified React setup with Hello World demo component
 
-### ✅ Week 3–4: Core Habit Tracking Features
+### Week 3–4: Core Habit Tracking Features
 - Developed `HabitForm` component to create and save new habits
 - Connected form input to Firestore with timestamped entries
 - Supported basic habit creation, editing, and deletion
 
-### ✅ Week 5–6: Logging, Calendar View & Statistics
+### Week 5–6: Logging, Calendar View & Statistics
 - Built `HabitLogger` to track daily habit status (completed/missed)
 - Implemented `CalendarView` to display logs grouped by date
 - Developed `StatsDashboard` to show completion rates and habit trends
 - Added `HabitDetails` to break down data for individual habits
 
-### ✅ Week 7–8: AI Intelligence & Insight Features
+### Week 7–8: AI Intelligence & Insight Features
 - Added `generateDailySummary()` function to simulate GPT-style feedback
 - Implemented behavior pattern detection using `detectPatterns.js`
 - Added habit bundling logic via `recommendHabitBundles.js`
