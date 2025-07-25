@@ -89,9 +89,20 @@ This data is collected from the user who participated in the testing for this pr
 ---
 
 ## Dataset & Model Use
-To simulate real user behavior, I invited a participant to log realistic habit-tracking data, generating a dataset of 100 habit logs over the past 27 days. These logs are stored in Firebase and accessed by AI utilities.
+To simulate real user behavior, I invited a participant to log realistic habit-tracking data, generating a dataset of 100 habit logs over the past 27 days. 
 
-The AI feedback system simulates OpenAI's GPT-style summaries and runs locally. While not using a hosted model, the modular structure allows real OpenAI API integration when credentials are provided.
+This project integrates OpenAI's ChatGPT API (`gpt-3.5-turbo`) to generate intelligent, personalized feedback on user habits.
+
+Key AI-powered modules include:
+
+- `generateDailySummary()` – Sends daily habit logs to GPT to generate reflective feedback messages
+- `detectPatterns.js` – Uses GPT to identify behavioral trends, such as consistency, improvement, or regressions
+- `recommendHabitBundles.js` – Leverages GPT to recommend grouped habits that can be completed together based on user behavior
+
+This integration provides dynamic and conversational insights that evolve with user data — making the tracker more supportive, motivational, and adaptive over time.
+
+
+
 
 
 ---
