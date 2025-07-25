@@ -4,6 +4,7 @@ import HabitLogger from "./HabitLogger";
 import CalendarView from "./CalendarView";
 import StatsDashboard from "./StatsDashboard";
 import HabitDetails from "./HabitDetails";
+import AISuggestions from "./AISuggestions";
 import { seedSampleLogsIfEmpty } from "./utils/seedSampleLogs";
 import './App.css';
 
@@ -51,6 +52,12 @@ const App = () => {
           placeholder="Enter habit name (e.g. 'Read')"
         />
         {selectedHabit && <HabitDetails habitName={selectedHabit} />}
+      </section>
+
+      <hr />
+
+      <section>
+        <AISuggestions />
       </section>
     </div>
   );
