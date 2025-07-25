@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HabitForm from "./HabitForm";
 import HabitLogger from "./HabitLogger";
 import CalendarView from "./CalendarView";
 import StatsDashboard from "./StatsDashboard";
 import HabitDetails from "./HabitDetails";
+import { seedSampleLogsIfEmpty } from "./utils/seedSampleLogs";
 
 const App = () => {
   const [selectedHabit, setSelectedHabit] = useState("");
+
+  useEffect(() => {
+    seedSampleLogsIfEmpty(); // ✅ This will seed sampleLogs.json once if Firestore is empty
+  }, []);
 
   return (
     <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", fontFamily: "Arial, sans-serif" }}>
