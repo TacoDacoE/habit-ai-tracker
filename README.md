@@ -71,6 +71,9 @@ Create a `.env` file in the root directory and add your OpenAI API key:
 
 Launch the app in development mode:
 
+### 🧪 Sample Data Initialization
+On first launch, the app will automatically seed Firestore with habit logs from: public/data/sampleLogs.json
+This data is collected from the user who participated in the testing for this project. 
 ---
 
 ## Dataset & Model Use
