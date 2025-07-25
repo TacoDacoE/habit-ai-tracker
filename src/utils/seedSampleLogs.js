@@ -1,5 +1,5 @@
 import { db } from "../firebaseConfig";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
 
 export async function seedSampleLogsIfEmpty() {
   const logsCollection = collection(db, "habitLogs");
@@ -10,19 +10,19 @@ export async function seedSampleLogsIfEmpty() {
     return;
   }
 
-  const response = await fetch("/data/sampleLogs.json");
-  const sampleLogs = await response.json();
+  try {
+    const response = await fetch("/data/sampleLogs.json");
+    const sampleLogs = await response.json();
 
-  for (const log of sampleLogs) {
-    try {
+    for (const log of sampleLogs) {
       await addDoc(logsCollection, {
         ...log,
-        date: new Date(log.date),
+        date: Timestamp.fromDate(new Date(log.date)),
       });
-    } catch (err) {
-      console.error("Failed to insert log:", log, err);
     }
-  }
 
-  console.log("Sample logs seeded successfully.");
+    console.log("✅ Sample logs seeded successfully.");
+  } catch (err) {
+    console.error("❌ Failed to seed sample logs:", err);
+  }
 }
