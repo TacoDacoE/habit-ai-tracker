@@ -60,7 +60,7 @@ npm install
 To simulate real user behavior, I invited a participant to log realistic habit-tracking data, generating a dataset of 100 habit logs over the past 27 days. These logs are stored in Firebase and accessed by AI utilities.
 
 The AI feedback system simulates OpenAI's GPT-style summaries and runs locally. While not using a hosted model, the modular structure allows real OpenAI API integration when credentials are provided.
-
+```
 ### 2. Create a `.env` File
 
 Create a `.env` file in the root directory and add your OpenAI API key:
@@ -73,6 +73,13 @@ Launch the app in development mode:
 
 ---
 
+## Dataset & Model Use
+To simulate real user behavior, I invited a participant to log realistic habit-tracking data, generating a dataset of 100 habit logs over the past 27 days. These logs are stored in Firebase and accessed by AI utilities.
+
+The AI feedback system simulates OpenAI's GPT-style summaries and runs locally. While not using a hosted model, the modular structure allows real OpenAI API integration when credentials are provided.
+
+
+---
 ## License
 
 MIT
