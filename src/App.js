@@ -11,36 +11,36 @@ const App = () => {
   const [selectedHabit, setSelectedHabit] = useState("");
 
   useEffect(() => {
-    seedSampleLogsIfEmpty(); // ✅ This will seed sampleLogs.json once if Firestore is empty
+    seedSampleLogsIfEmpty(); // ✅ Seed sample logs only if Firestore is empty
   }, []);
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", fontFamily: "Arial, sans-serif" }}>
+    <div className="app-container">
       <h1>🌱 Habit AI Tracker</h1>
 
       <section>
         <HabitForm />
       </section>
 
-      <hr style={{ margin: "2rem 0" }} />
+      <hr />
 
       <section>
         <HabitLogger />
       </section>
 
-      <hr style={{ margin: "2rem 0" }} />
+      <hr />
 
       <section>
         <CalendarView />
       </section>
 
-      <hr style={{ margin: "2rem 0" }} />
+      <hr />
 
       <section>
         <StatsDashboard />
       </section>
 
-      <hr style={{ margin: "2rem 0" }} />
+      <hr />
 
       <section>
         <h2>🔎 View Habit Details</h2>
@@ -49,7 +49,6 @@ const App = () => {
           value={selectedHabit}
           onChange={(e) => setSelectedHabit(e.target.value)}
           placeholder="Enter habit name (e.g. 'Read')"
-          style={{ padding: "0.5rem", marginRight: "0.5rem" }}
         />
         {selectedHabit && <HabitDetails habitName={selectedHabit} />}
       </section>
