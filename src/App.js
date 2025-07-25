@@ -5,6 +5,7 @@ import CalendarView from "./CalendarView";
 import StatsDashboard from "./StatsDashboard";
 import HabitDetails from "./HabitDetails";
 import { seedSampleLogsIfEmpty } from "./utils/seedSampleLogs";
+import './App.css';
 
 const App = () => {
   const [selectedHabit, setSelectedHabit] = useState("");
